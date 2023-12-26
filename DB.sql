@@ -15,6 +15,23 @@ CREATE TABLE `tipo` (
    PRIMARY KEY (`ID`)
 );
 
+CREATE TABLE `cassa` (
+  `ID` int(11) UNSIGNED NOT NULL,
+  `dimensioni` varchar(100) NOT NULL, /*misure in cm*/
+  `misura` varchar(500) NOT NULL,   /*misure inteso come GRANDE, MEDIO, PICCOLO*/
+  `forma` varchar(500) NOT NULL, /*quadrata, rettangolare, altro*/
+
+   PRIMARY KEY (`ID`)
+);
+
+CREATE TABLE `cinturino` (
+  `ID` int(11) UNSIGNED NOT NULL,
+  `dimensioni` varchar(100) NOT NULL,
+  `materiale` varchar(500) NOT NULL,
+
+   PRIMARY KEY (`ID`)
+);
+
 CREATE TABLE `prodotto` (
   `ID` int(10) UNSIGNED NOT NULL,
   `nomeorologio` varchar(400) NOT NULL,
@@ -23,17 +40,20 @@ CREATE TABLE `prodotto` (
   `keywords` varchar(500) DEFAULT NULL,
   `materiale` varchar(100) NOT NULL,
   `modello` varchar(100) NOT NULL,
-  `dimensionecinturino` varchar(200) DEFAULT NULL,
-  `dimensionequadrante` varchar(200) DEFAULT NULL,
+  `sesso` CHAR DEFAULT NULL, /*si intende il carattere M/F per capire se è un orologio per uomo o donna*/
   `peso` varchar(100) DEFAULT NULL,
   `prezzo` decimal(5,2) UNSIGNED NOT NULL,
 
+  `cinturino` int(10) UNSIGNED NOT NULL,
+  `cassa` int(10) UNSIGNED NOT NULL,
   `tipologia` int(10) UNSIGNED NOT NULL,
   `nomemarca` int(10) UNSIGNED NOT NULL,
 
   PRIMARY KEY (`ID`),
   FOREIGN KEY (`tipologia`) REFERENCES `tipo` (`ID`),
-  FOREIGN KEY (`nomemarca`) REFERENCES `marca` (`ID`)
+  FOREIGN KEY (`nomemarca`) REFERENCES `marca` (`ID`),
+   FOREIGN KEY (`cinturino`) REFERENCES `cinturino` (`ID`),
+  FOREIGN KEY (`cassa`) REFERENCES `cassa` (`ID`)
 );
 
 
