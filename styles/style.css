@@ -1,0 +1,65 @@
+
+
+/* Martel font - Open Font License https://fonts.google.com/specimen/Martel */
+@font-face {
+    font-family: 'Martel';
+    src: url('../fonts/Martel-Regular.ttf');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Martel';
+    src: url('../fonts/Martel-Bold.ttf');
+    font-weight: 700;
+    font-style: bold;
+}
+
+@font-face {
+    font-family: 'Martel';
+    src: url('../fonts/Martel-Light.ttf');
+    font-weight: 400;
+    font-style: light;
+}
+
+
+
+
+
+
+* {
+	padding: 0em;
+	margin: 0em;
+}
+
+:root {
+
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --accent-color: #34090C;
+    --hover-color: #000000;
+    
+    --text-color-footer: #ffffff;
+    --background-color-footer: #000000;
+
+    --background-color-button-active: #000000; 
+    --background-color-button-hover: #000000; 
+    --background-color-button-inactive: #ffffff; 
+
+    --radio-active-color: #000000;
+
+}
+
+html, body {
+	font-size: 100%;
+	font-family: "Martel", sans-serif;
+	line-height: 1.5em;
+	background-color: var(--bgcolor);
+	color: var(--txtcolor);
+	margin: auto;
+}
+
+body {
+	max-width: 1024px;
+	border:  1px solid #000;
+}
