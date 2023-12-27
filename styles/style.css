@@ -54,8 +54,8 @@ html, body {
 	font-size: 100%;
 	font-family: "Martel", sans-serif;
 	line-height: 1.5em;
-	background-color: var(--bgcolor);
-	color: var(--txtcolor);
+	background-color: var(--background-color);
+	color: var(--text-color);
 	margin: auto;
 }
 
