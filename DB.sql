@@ -70,7 +70,7 @@ CREATE TABLE `utente` (
 
 INSERT INTO utente (ID, admin, nome, username, email, password) VALUES
 (1, 0, 'user', 'user', 'user@example.com', '$2y$10$shPpMTNpr17klPGTz6RF2e2W1O9rF00aLq864kMKo4DCB8TbvcqoS'),
-(2, 1, 'admin', 'admin', 'admin@example.com', 'admin');
+(2, 1, 'admin', 'admin', 'admin@example.com', '$2y$10$HkqzRS01rUT/b9dfBeG1Pe360VuvPBjPGO7dFStsYXW0yUFm7ucyO');
 /* le password sono rispettivamente "user" e "admin" */
 
 CREATE TABLE `recensione` (
