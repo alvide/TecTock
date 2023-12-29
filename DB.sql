@@ -68,6 +68,10 @@ CREATE TABLE `utente` (
   PRIMARY KEY (`ID`)
 ) ;
 
+INSERT INTO utente (ID, admin, nome, username, email, password) VALUES
+(1, 0, 'user', 'user', 'user@example.com', 'user'),
+(2, 1, 'admin', 'admin', 'admin@example.com', 'admin');
+
 CREATE TABLE `recensione` (
   `ID` int(11) UNSIGNED NOT NULL,
   `prodotto` int(10) UNSIGNED NOT NULL,
