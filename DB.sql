@@ -4,6 +4,7 @@ CREATE TABLE `marca` (
   PRIMARY KEY (`ID`)
 );
 
+/* il tipo sostanzialmente è se un orologio è: al quarzo, automatico, cinetico, digitale, smartwatch ecc...*/
 CREATE TABLE `tipo` (
   `ID` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
   `tipologia` varchar(100) NOT NULL,
@@ -14,9 +15,9 @@ CREATE TABLE `tipo` (
 
 CREATE TABLE `cassa` (
   `ID` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `dimensioni` varchar(100) NOT NULL,
-  `misura` varchar(500) NOT NULL,
-  `forma` varchar(500) NOT NULL,
+  `dimensioni` varchar(100) NOT NULL, /*misure in cm*/
+  `misura` varchar(500) NOT NULL,   /*misure inteso come GRANDE, MEDIO, PICCOLO*/
+  `forma` varchar(500) NOT NULL, /*quadrata, rettangolare, altro*/
   PRIMARY KEY (`ID`)
 );
 
@@ -35,7 +36,7 @@ CREATE TABLE `prodotto` (
   `keywords` varchar(500) DEFAULT NULL,
   `materiale` varchar(100) NOT NULL,
   `modello` varchar(100) NOT NULL,
-  `sesso` CHAR DEFAULT NULL,
+  `sesso` CHAR DEFAULT NULL,    /*si intende il carattere M/F per capire se è un orologio per uomo o donna*/
   `peso` varchar(100) DEFAULT NULL,
   `prezzo` decimal(5,2) UNSIGNED NOT NULL,
   `cinturino` int(10) UNSIGNED NOT NULL,
