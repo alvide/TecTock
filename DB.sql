@@ -72,6 +72,8 @@ CREATE TABLE `recensione` (
   `contenuto` text,
   `punteggio` decimal(2,1) UNSIGNED NOT NULL DEFAULT '0.0',
   PRIMARY KEY (`ID`),
-  FOREIGN KEY (`utente`) REFERENCES `utente` (`ID`)
+  FOREIGN KEY (`utente`) REFERENCES `utente` (`ID`),
+  FOREIGN KEY (`prodotto`) REFERENCES `prodotto` (`ID`)
 );
+
 
