@@ -1,0 +1,171 @@
+/* Martel font - Open Font License https://fonts.google.com/specimen/Martel */
+@font-face {
+    font-family: 'Martel';
+    src: url('../fonts/Martel-Regular.ttf');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Martel';
+    src: url('../fonts/Martel-Bold.ttf');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Martel';
+    src: url('../fonts/Martel-Light.ttf');
+    font-weight: 400;
+}
+
+*{
+	padding: 0em;
+	margin: 0em;
+}
+
+:root { 
+
+    --BackgroundColor: #fff;
+    --TextColorBlack: #000;
+    --TextColorWhite: #fff;
+    --FlagColor: #34090C;
+    --LinkColor: #0000EE;
+    --VisitedLink: #AA6CE4;
+
+}
+
+html {
+	font-size: 100%;
+	font-family: "Martel", sans-serif;
+	line-height: 1.5em;
+    margin: auto;
+	background-color: var(--BackgroundColor);
+	color: var(--TextColorBlack);
+}
+
+body
+{
+    display: flex; /*layout con flex per poi permettere al footer di stare in basso alla pagina*/
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+a:visited {
+    color: var(--VisitedLink);
+}
+a:link {
+    color: var(--LinkColor);
+}
+
+.NavHelp{
+    position: absolute; 
+    height: 1px; 
+    width: 1px; 
+    overflow: hidden; 
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+#NavMobile {
+    display: none;
+}
+
+/*------------------- HEADER ----------------------- */
+
+header{
+    padding: 0.2em;
+    background-color: var(--FlagColor);
+    background-repeat: no-repeat;
+}
+
+header h1{
+    text-indent:200%;
+    overflow:hidden;
+    font-size: 8.5em;
+    line-height: 1em;
+    background-image: url(../images/logo.webp);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin:0.1em;
+}
+
+/*------------------MENU----------------------------------*/
+#NavDesktop{
+    display: flex;
+    padding: 0.5em;
+    justify-content: center;
+    background-color: var(--FlagColor);
+}
+
+#NavDesktop a:link{
+    color: var(--TextColorWhite);
+    font-weight: bold;
+}
+
+#NavDesktop li{
+    color: var(--TextColorWhite);
+    font-weight: bold;
+}
+
+nav#NavDesktop ul{
+    list-style-type: none;
+    margin: 0.2em;
+    padding: 0.2em;
+}
+
+nav#NavDesktop ul li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 1.8em;
+}
+ /*----------------------BREADCRUMB--------------------------*/
+#breadcrumb {
+    padding: 1em 3.5em 1em 3.5em;
+    color: #fff;
+    background-color: var(--FlagColor);
+    margin-bottom: 2em;
+}
+
+#breadcrumb a:link {
+    color: var(--TextColorWhite);
+}
+
+/*-----------------------FOOTER------------------------------*/
+footer {
+    margin-top: auto; 
+    padding: 2em;
+    text-align: center;
+    background-color: var(--FlagColor);
+}
+footer p {
+    color: var(--TextColorWhite);
+}
+
+footer p {
+    padding: 0em 2em;
+    display: inline;
+}
+
+footer img {
+    padding: 0em 0.4em;
+    display: inline;
+    vertical-align: middle;
+}
+
+#scrollToTopLink {
+    position: fixed; /* posizione dell'elemento come fissata rispetto alla finestra del browser*/
+    bottom: 20px; /*Posiziona l'elemento a 20 pixel dal margine inferiore della finestra del browser.*/
+    right: 20px; 
+    display: none; /* Inizialmente nasconde l'elemento. Sarà visibile solo quando verrà attivato tramite JS.*/
+    background-color:var(--TextColorBlack);
+    color: var(--TextColorWhite);
+    padding: 0.7em;
+    text-decoration: none; /* Rimuove la sottolineatura del testo */
+    border-radius: 0.5em;
+    border: var(--TextColorBlack) 0.2em solid;
+}

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="utf-8" />
+    <title>TecTock - Aggiungi Prodotto</title>
+    <meta name="author" content="TecTock" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./styles/style.css" media="screen" />
+    <link rel="stylesheet" href="./styles/home.css" media="screen" />
+    <link rel="stylesheet" href="./styles/print.css" media="print" />
+    <link rel="stylesheet" href="./styles/mobile.css" media="screen and (max-width:650px)" />
+    <link rel="stylesheet" href="./styles/formProdotti.css"/>
+    <link rel="icon" type="image/png" href="./images/icon.ico" />
+    <script src="./javascript/tornasu.js"></script>
+    <script src="./javascript/aggiungiprodotto.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <a class="NavHelp" href="#content">Passa al contenuto principale</a>
+        <h1><span lang="en">TeckTock</span></h1>
+        <nav id="NavDesktop" aria-label="Menù di navigazione">
+            <ul>
+                <li><a href="./index.html"><span lang="en">Home</span></a></li>
+                <li><a href="./prodotti.php">Prodotti</a></li>
+                <li><a href="./html/contatti.html">Contatti</a></li>
+                <li><a href="./html/FAQ.html"><abbr title="Frequently Asked Questions">FAQ</abbr></a></li>
+                <li><a href="./login.php">Area personale</a></li>
+            </ul>
+        </nav>
+
+        <nav id="NavMobile" aria-label="Menù di navigazione per mobile">
+            <ul>
+                <li><a href="./index.html"><img src="./images/home.png" height="40" width="40" alt=""/><p lang="en">Home</p></a></li>
+                <li><a href="./prodotti.php"><img src="./images/prodotti.png" height="40" width="40" alt=""/><p>Prodotti</p></a></li>
+                <li><a href="./html/contatti.html"><img src="./images/contatti.png" height="40" width="40" alt=""/><p>Contatti</p></a></li>
+                <li><a href="./html/FAQ.html"><img src="./images/faq.png" height="40" width="40" alt=""/><p>FAQ</p></a></li>
+                <li><a href="./login.php"><img src="./images/areapersonale.png" height="40" width="40" alt=""/><p>Area personale</p></a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <nav id="breadcrumb" aria-label="Breadcrumb">
+        <p>Ti trovi in: <a href="./index.html" lang="en">Home</a> > <a href="./prodotti.php">Prodotti</a> > Aggiungi prodotto</p>
+    </nav>
+
+    <main id="content">
+
+        <form action="aggiungiProdotto.php" method="post" enctype="multipart/form-data" >
+            <!--messaggiErrore-->
+            <div class="formGroup">
+                <label for="nomeorologio">Nome orologio:
+                <input type="text" id="nomeorologio" name="nomeorologio" value="<validateNome/>" onblur="validateNome()" ><br>
+            </label>
+            <p class="pStyle" id="NomeOrologio">Sono concessi lettere, numeri, spazi e trattini.</p>
+            </div>
+        
+            <div class="formGroup">
+                <label for="descrizione">Descrizione orologio:
+                <input type="text" id="descrizione" name="descrizione" value="<validateDescOr/>" onblur="validateDescOr()">
+            </label>
+            <p class="pStyle" id="DescrizioneOrologio" >Sono concessi lettere, numeri, spazi, trattini e segni di punteggiatura.</p>
+            </div>
+        
+            <div class="formGroup">
+                <label for="descImmagine">Descrizione immagine:
+                <input type="text" id="descImmagine" name="descImmagine" value="<validateDescImg/>" onblur="validateDescImg()">
+            </label>
+            <p class="pStyle" id="DescrizioneImmagine">Sono concessi lettere, numeri, spazi, trattini e segni di punteggiatura.</p>
+            </div>
+        
+            <div class="formGroup">
+                <label for="materiale">Materiale orologio:
+                <input type="text" id="materiale" name="materiale" value="<validateMatOr/>" onblur="validateMatOr()">
+            </label>
+            <p class="pStyle" id="MaterialeOrologio">Sono concessi lettere, spazi e trattini.</p>
+            </div>
+        
+            <div class="formGroup">
+                <label for="modello">Modello orologio:
+                <input type="text" id="modello" name="modello" value="<validateModOr/>" onblur="validateModOr()" >
+            </label>
+            <p class="pStyle" id="ModelloOrologio">Sono concessi lettere, numeri, spazi e trattini.</p>
+            </div>
+        
+            <div class="formGroup">
+                <label for="sesso">Sesso:
+                <select id="sesso" name="sesso">
+                    <!--selectSessoReplace-->
+                </select>
+            </label>
+            </div>
+        
+            <div class="formGroup">
+                <label for="peso">Peso orologio:
+                <input type="text" id="peso" name="peso" value="<validatePeso/>" onblur="validatePeso()">
+            </label>
+            <p class="pStyle" id="PesoOrologio">Il peso è in grammi. Sono concessi solo numeri. Per i decimali mettere il punto.</p>
+            </div>
+        
+            <div class="formGroup">
+                <label for="prezzo">Prezzo orologio:
+                <input type="text" id="prezzo" name="prezzo" value="<validatePrezzoOr/>" onblur="validatePrezzoOr()">
+            </label>
+            <p class="pStyle" id="PrezzoOrologio">Sono concessi solo numeri. Per i decimali mettere il punto.</p>
+            </div>
+
+            <div class="formGroup">
+                <label for="marca">Marca orologio:
+                <input type="text" id="marca" name="marca" value="<validateMarcaOr/>"  onblur="validateMarcaOr()">
+            </label>
+            <p class="pStyle" id="MarcaOrologio">Sono concessi lettere, numeri, spazi e trattini.</p>
+            </div>
+        
+           <div class="contenitore">
+                <p>Cassa:</p>
+                <div class="formGroup" id="formCassa">
+                    <label for="dimensioniCassa">Dimensioni
+                    <input type="text" id="dimensioniCassa" name="dimensioniCassa" value="<validateDimCassa/>" onblur="validateDimCassa()">
+                </label>
+                <p class="pStyle" id="DimensioneCassa">Sono concessi numeri e lettere. Sono tre dimensioni</p>
+                    <label for="misuraCassa">Misura
+                    <input type="text" id="misuraCassa" name="misuraCassa" value="<validateMisCassa/>" onblur="validateMisCassa()">
+                </label>
+                <p class="pStyle" id="MisuraCassa">Sono concessi lettere e spazi.</p>
+                    <label for="forma">Forma
+                    <input type="text" id="forma" name="forma"  value="<validateFormaCassa/>" onblur="validateFormaCassa()">
+                </label>
+                <p class="pStyle" id="FormaCassa">Sono concessi lettere e spazi.</p>
+                </div>
+           </div>     
+
+           <div class="contenitore">
+                <p>Cinturino:</p>
+                <div class="formGroup"  id="formCinturino">
+                    <label for="dimensioniCinturino">Dimensioni
+                    <input type="text" id="dimensioniCinturino" name="dimensioniCinturino"  value="<validateDimCinturino/>" onblur="validateDimCinturino()">
+                </label>
+                <p class="pStyle" id="DimensioneCinturino">Sono concessi numeri e lettere. Sono due dimensioni</p>
+                    <label for="materialeCinturino">Materiale
+                    <input type="text" id="materialeCinturino" name="materialeCinturino"  value="<validateMatCinturino/>" onblur="validateMatCinturino  ()">
+                </label>
+                <p class="pStyle" id="MaterialeCinturino">Sono concessi lettere, spazi e trattini.</p>
+                </div>
+            </div>
+        
+        
+        <div class="contenitore">    
+            <p>Inserisci un'immagine in formato .webp.</p>
+
+            <div class="formGroup" id="formImmagine">
+                <label for="formImage">Immagine: 
+                <input type="file" id="formImage" name="formImage"/>
+            </label>
+            </div>
+
+        </div>   
+
+            <div class="formButton">
+                <input class="button" type="submit" name="formSubmit" value="Inserisci nuovo prodotto">
+                <input class="button" type="reset" name="formReset" value="Cancella dati inseriti">
+            </div>
+
+        </form>
+        
+    </main>
+
+
+    <a href="#" id="scrollToTopLink"> Torna su </a>
+    <script src="./javascript/tornasu.js"></script>
+
+    <footer>
+        <img class="imgCodiceValido" height="40" src="./images/W3C_HTML5_certified.webp" alt="HTML5 valido" />
+        <p><span lang="en">TecTock - All Rights Reserved</span></p>
+        <img class="imgCodiceValido" height="40" src="./images/W3C_CSS_certified.webp" alt="CSS valido" />
+    </footer>
+
+</body>
+
+</html>

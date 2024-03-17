@@ -1,0 +1,249 @@
+#content {
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+main form {
+    padding: 1em; /* Aggiunge padding al form */
+    border: 3px solid var(--TextColorBlack);
+    text-align: center; /* Centra il testo all'interno del form */
+    
+}
+
+.formButton {
+    margin: 1em;
+}
+
+.mainFooter {
+    margin: 1.5em; /* Aggiungi spazio tra i campi e i pulsanti */
+    text-align: center;
+}
+
+.mainFooterButton {
+    margin: 1.5em;
+}
+
+form label {
+    
+    display: block;
+    margin-bottom: 0.5em;
+    margin-top: 1em;
+    font-size: 1.5em; /* Modifica la dimensione del testo delle label */  
+    font-weight: bold; 
+} 
+
+a.button{
+    background-color:var(--FlagColor);
+    color: var(--TextColorWhite);
+    text-decoration: none; /* Rimuove la sottolineatura del testo */
+    border-radius: 0.5em;
+    cursor: pointer;
+    padding: 0.5em;
+}
+
+a.button:visited {
+    color: var(--TextColorWhite);
+}
+
+a.button:hover {
+    background-color: #4D1317;
+    color: var(--TextColorWhite);
+}
+
+#SottoNav a:visited {
+    color: var(--VisitedLink);
+}
+
+#SottoNav{
+    display: flex;
+    padding: 0.5em;
+    justify-content: center;
+    background-color: var(--FlagColor);
+}
+
+#SottoNav a:link{
+    color: var(--TextColorWhite);
+    font-weight: bold;
+}
+
+#SottoNav li{
+    color: var(--TextColorWhite);
+    font-weight: bold;
+}
+
+nav#SottoNav ul{
+    list-style-type: none;
+    margin: 0.2em;
+    padding: 0.2em;
+}
+
+nav#SottoNav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 1.8em;
+}
+
+form .button{
+    background-color:var(--FlagColor);
+    color: var(--TextColorWhite);
+    padding: 1.5em;
+    text-decoration: none; /* Rimuove la sottolineatura del testo */
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="email"] {
+    padding: 0.8em;
+    border-radius: 0.5em;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease; /* Transizione al passaggio del mouse */
+}
+
+/* Stile al passaggio del mouse */
+form input[type="text"]:focus,
+form input[type="password"]:focus
+form input[type="email"]:focus {
+    outline: none;
+    border-color: #3498db; /* Cambia colore al focus */
+}
+
+.subMenu p, .subMenu a {
+    display: inline-block; 
+    vertical-align: middle; 
+    margin: 0; 
+}
+
+.saluto{
+    margin: 2em;
+}
+
+.infoAccount {
+    padding: 2em;
+    border: 3px solid var(--FlagColor);
+    text-align: center;
+    background-color: var(--TextColorWhite); /* Aggiungi il colore di sfondo desiderato */
+    color: var(--FlagColor); /* Aggiungi il colore del testo desiderato */
+    border-radius: 3em;
+}
+
+.infoAccount label {
+    display: block;
+    margin-top: 0.5em;
+    font-weight: bold;
+}
+
+.infoAccount p {
+    margin-bottom: 0.5em;
+    font-size: 1em;
+    color: var(--TextColorBlack); /* Personalizza il colore del testo */
+    line-height: 1.4;
+}
+
+.infoContent {
+    margin: 0.5em;
+    padding: 0.5em;
+    border: 3px solid var(--FlagColor);
+    text-align: center; /* Allinea il testo a destra */
+    box-sizing: border-box;
+    border-radius: 3em;
+}
+
+.infoContent label {
+    display: block;
+    margin-top: 1em;
+    font-weight: bold;
+}
+
+.infoContent p {
+    margin-bottom: 0.5em;
+    font-size: 1em;
+    color: var(--TextColorBlack);
+    line-height: 1.4;
+    word-wrap: break-word; 
+}
+
+.singleElement {
+    padding: 0.5em;
+    display: inline-block;
+    margin-right: 1em; /* Aggiungi margine a destra per separare gli elementi */
+    text-align: center; 
+}
+
+.buttonRecensioni{
+    display: inline-block;
+    text-align: center; 
+}
+
+.Info p#nome,
+.Info p#username,
+.Info p#password,
+.Info p#email {
+    font-weight: normal;
+}
+
+.titolo{
+    margin:2em;
+}
+
+.profileButton{
+    margin: 2em;
+}
+
+.errorMessage {
+    color:#8B0000;
+    margin: 1em; 
+}
+
+.recensioni{
+    padding: 1em; /* Aggiunge padding al form */
+    border: 3px solid var(--TextColorBlack);
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 3em;
+}
+
+#aggiungiRecensione{
+    margin: 2em;
+}
+
+form #valutazione,
+form #commento,
+form #prodotto {
+    padding: 0.8em;
+    border-radius: 0.5em;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease;
+}
+
+form #valutazione:focus,
+form #commento:focus,
+form #prodotto:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+p #contenuto{
+    max-width: 40%;
+}
+
+.pStyle {
+    font-weight: normal; 
+    font-size: 1em; 
+    text-align: center; 
+}
+
+.voce{
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.grassetto {
+    font-weight: bold;
+    font-size: 1.3em;
+}

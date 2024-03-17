@@ -1,0 +1,49 @@
+/*  -------------------- ERRORE 404------------------------------------*/
+.Errore404 h2{
+    text-indent:200%;
+    overflow:hidden;
+    font-size: 8em;
+    line-height: 1em;
+    background-image: url(../images/404.webp);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin:0.1em;
+}
+
+.Errore404 {
+    text-align: center;
+    padding: 4em;
+}   
+
+.Errore404 p {
+    padding: 0 0 1em;
+}
+
+.TitleError {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
+/*  -------------------- ERRORE 500------------------------------------*/
+.Errore500 h2{
+    text-indent:200%;
+    overflow:hidden;
+    font-size: 8em;
+    line-height: 1em;
+    background-image: url(../images/500.webp);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin:0.1em;
+}
+
+.Errore500 {
+    text-align: center;
+    padding: 4em;
+}   
+
+.Errore500 p {
+    padding: 0 0 1em;
+}

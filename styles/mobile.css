@@ -1,0 +1,145 @@
+/*----------------- HEADER-MENU------------------*/
+#NavDesktop {
+    display: none;
+}
+
+#NavMobile {
+    display: block;
+    position: fixed;            /*il menù mobile rimane fisso*/
+    bottom: 0;                  /*il menù mobile lo metto in basso*/
+    left: 0;
+    width: 100%;
+    background-color: var(--BackgroundColor);
+    padding: 1em;
+    box-sizing: border-box;   /* aggiunto per includere il padding nella larghezza totale */
+}
+
+#NavMobile ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;          /*le icone sono separate tra loro e in orizzontale*/
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+#NavMobile li {
+    text-align: center;
+}
+
+#NavMobile img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+#NavMobile a {
+    text-decoration: none;
+    color: var(--TextColor);
+}
+
+#NavMobile p {
+    margin: 0.5em 0 0;
+    font-size: 0.8em;
+}
+
+/*-------------HOME----------------*/
+
+#card1, #card2{                         /*su desktop c'è molto spazio tra le due card, quindi vado a ridurlo nel mobile*/
+    margin-top: 3em; 
+    margin-bottom: 3em; 
+    padding: 4em;
+}
+
+.Cards h3,
+.Cards p,
+.Cards a {
+    font-size: 1.2em;                       /* dimensione del carattere più piccola per mobile */
+}
+
+@media (max-width: 600px) {                 /*aggiungo una media query per gli schermi ancora più piccoli tipo iphone 14, e diminuisco ancora di più il testo delle card che sennò esce*/
+    .Cards h3,
+    .Cards p,
+    .Cards a {
+        font-size: 0.7em;               /* Riduci le dimensioni del carattere per schermi più piccoli */
+    }
+}
+
+/* -------- FOOTER -------- */
+
+footer {                        /*il footer va sopra al menù mobile così*/
+    margin-bottom: 20%;
+}
+
+footer p {
+    display: block;
+    padding: 0.4em 0em;
+}
+
+footer img {
+    display: block;
+    height: 30px;
+    margin: 0 auto;
+}
+
+
+/*---------------------AREA RISERVATA--------------------*/
+@media screen and (max-width: 650px) {
+    #SottoNav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #SottoNav li {
+        margin: 0;
+        margin-bottom: 0.5em;
+    }
+
+    .infoAccount {
+        padding: 1em;
+        margin: 0.5em;
+    }
+
+    .profileButton {
+        margin: 1em;
+    }
+
+    .saluto h1 {
+        font-size: 1.8em;
+    }
+    .profileButton{
+        padding: 1em;
+    }
+}
+
+
+/******************LOGIN******************/
+@media screen and (max-width: 650px) {
+    .titolo h1 {
+        font-size: 1.5em; /* Modifica la dimensione del font dell'h1 su schermi più piccoli */
+    }
+
+    main form {
+        margin: 1em;
+    }
+
+    .recensioni{
+        margin: 1em;
+    }
+}
+
+/******************aggiungi recensione******************/
+
+@media screen and (max-width: 650px) {
+    .saluto h1 {
+        font-size: 1.5em; /* Modifica la dimensione del font dell'h1 su schermi più piccoli */
+    }
+}
+
+/******************aggiungi prodotto******************/
+@media screen and (max-width: 650px) {
+    .container h1 {
+        padding-left: 1em; /* Modifica la dimensione del font dell'h1 su schermi più piccoli */
+    }
+}

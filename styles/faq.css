@@ -1,0 +1,32 @@
+.faqs {
+	margin: auto;
+	max-width: 800px;
+	list-style-type: none;
+}
+
+.box {
+	padding: 1em 0;
+	margin: auto;
+	max-width: 800px;
+	border-bottom: 1px solid #ccc;
+}
+
+.domanda {
+	padding: 0.5em;
+	padding-bottom: 0.2em;
+	font-weight: 800;
+}
+
+.risposta {
+	color: black;
+	padding-left: 0.5em;
+}
+
+h2 {
+    padding: 1em;
+    text-align: center;
+}
+
+#pFaq {
+    text-align: center;
+}

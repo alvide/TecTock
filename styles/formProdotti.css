@@ -1,0 +1,77 @@
+.formGroup {
+    margin-bottom: 0.5em;
+    padding: 0.5em;
+}
+
+label p{
+    font-weight: normal;
+}
+
+.formGroup input, select {
+    width: 100%;
+    padding: 0.3em;
+    box-sizing: border-box; 
+    margin-bottom: 0.5em; 
+    border-radius: 0.5em;
+}
+
+#formCassa,
+#formCinturino, #formImmagine {
+
+    display: flex;
+    flex-direction: column;
+    border: 2px solid var(--TextColorBlack);
+    padding: 0.5em;
+    margin-top: 3.5em;
+    margin-bottom: 3.5em;
+}
+
+#errori {
+    padding: 0.5em;
+    border: 2px solid var(--TextColorBlack);
+    margin-left: 1em;
+    margin-top: 3.5em;
+    margin-bottom: 3.5em;
+    text-align: left;
+    list-style-position: inside;
+}
+
+#formCassa input,
+#formCinturino input {
+    width: 100%;
+    padding: 0.5em;
+    box-sizing: border-box; 
+    margin-bottom: 2.5em; 
+    border-radius: 0.5em;
+}
+
+
+.contenitore{
+    padding: 0.5em;
+    margin-top: 3.5em;
+    margin-bottom: 3.5em;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenitore p {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.contenitore .formGroup .pStyle { /*i p con la classe pStyle non prendono lo stile dei p dentro container*/
+    font-weight: normal; 
+    font-size: 1em; 
+    text-align: center; 
+}
+
+.formButton{
+    padding: 2em;
+}
+
+.formGroup label {
+    font-size: 1.1em; 
+    font-weight: bold; 
+    display: block; 
+}

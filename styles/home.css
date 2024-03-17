@@ -1,0 +1,116 @@
+/*------------------CONTENUTO DELLA HOME-------------------------------*/
+
+main div { /* di default, i div avranno il testo centrato e i margini e padding di conseguenza. poi ogni div può cambiare */
+    margin: 0.5em;
+    padding: 20vh 4vw;
+    text-align: center;
+}
+
+.banner {
+    background-color: rgba(0, 0, 0, 0.450);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-image: url("../images/banner.webp");
+}
+
+.button{
+    background-color:var(--FlagColor);
+    color: var(--TextColorWhite);
+    text-decoration: none; /* Rimuove la sottolineatura del testo */
+    border-radius: 0.5em;
+    padding: 0.8em 1em;
+}
+
+
+.banner a {
+    border: 0.3em;
+    border: 2px solid var(--BackgroundColor);
+}
+
+
+/*                                                               CSS PER COLLEZIONE ASTRONOMY E ARTE OROLOGERIA ITALIANA*/
+.CollectionAstronomy,
+.CategorieOrologi {
+    padding-top: 1em;
+    padding-bottom: 3em; 
+}
+
+.CollectionAstronomy h2,
+.CollectionAstronomy p,
+.CategorieOrologi h2 {
+    margin: 0;
+    padding-bottom: 0.2em;
+    padding-top: 0.2em;
+}
+
+.ImageContainerCollection,
+.ImageContainerCategorie {
+    display: flex;
+    flex-wrap: wrap;    /* Per far andare a capo le immagini quando lo spazio è insufficiente */
+    gap: 5em;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+}
+
+.ImageContainerCollection img,
+.ImageContainerCategorie img {
+    max-width: 14em;
+    height: 14em;
+    border-radius: 1em;
+}
+
+.ImageWithCaption {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+    padding: 1em;
+}
+
+
+
+/*                                                                        CSS PER LE 2 CARTE A FONDO PAGINA*/
+.Cards {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    background-blend-mode: overlay;
+    line-height: 3.5em;
+}
+
+.Cards a:visited, .banner a:visited {
+    color: var(--TextColorWhite);
+}
+
+.Cards a:link, .banner a:link  {
+    color: var(--TextColorWhite);
+}
+
+.Cards h3,
+.Cards p
+{
+    color: var(--TextColorWhite);
+    font-size: 1.5em; 
+    margin: 0.5em 0;
+}
+
+.Cards a {
+    border: 2px solid var(--BackgroundColor);
+}
+
+#card1{
+    background-image: url("../images/card1.webp");
+    text-align: left;
+    margin-top: 7em;
+    margin-bottom: 12em;
+}
+
+#card2{
+    background-image: url("../images/card2.webp");
+    text-align: right;
+    margin-top: 12em;
+    margin-bottom: 10em;
+}

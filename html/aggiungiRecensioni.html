@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="utf-8"/>
+        <title>TecTock - Nuova Recensione</title>
+        <meta name="author" content="TecTock"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="./styles/style.css" media="screen"/>
+        <link rel="stylesheet" href="./styles/login.css" media="screen"/>
+        <link rel="stylesheet" href="./styles/print.css" media="print"/>
+        <link rel="stylesheet" href="./styles/mobile.css" media="screen and (max-width:650px)"/>
+        <link rel="icon" type="image/png" href="./images/icon.ico" />
+        <script src="./javascript/tornasu.js"></script>
+        <script src="./javascript/recensione.js"></script>
+    </head>
+
+<body>
+    <header>
+        <a class="NavHelp" href="#content">Passa al contenuto principale</a>
+        <h1><span lang="en">TeckTock</span></h1>
+        
+
+        <nav id="NavDesktop" aria-label="Menù di navigazione">
+            <ul>
+                <li><a href="./index.html"><span lang="en">Home</span></a></li>
+                <li><a href="./prodotti.php">Prodotti</a></li>
+                <li><a href="./html/contatti.html">Contatti</a></li>
+                <li><a href="./html/FAQ.html"><abbr title="Frequently Asked Questions">FAQ</abbr></a></li>
+                <li><a href="./login.php">Area personale</a></li>
+            </ul>
+        </nav>
+
+        <nav id="NavMobile" aria-label="Menù di navigazione per mobile">
+            <ul>
+                <li><a href="./index.html"><img src="./images/home.png" height="40" width="40" alt=""/><p lang="en">Home</p></a></li>
+                <li><a href="./prodotti.php"><img src="./images/prodotti.png" height="40" width="40" alt=""/><p>Prodotti</p></a></li>
+                <li><a href="./html/contatti.html"><img src="./images/contatti.png" height="40" width="40" alt=""/><p>Contatti</p></a></li>
+                <li><a href="./html/FAQ.html"><img src="./images/faq.png" height="40" width="40" alt=""/><p>FAQ</p></a></li>
+                <li><a href="./login.php"><img src="./images/areapersonale.png" height="40" width="40" alt=""/><p>Area personale</p></a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+<nav id="breadcrumb" aria-label="Breadcrumb">
+    <p>Ti trovi in: <a href="./index.html"><span lang="en">Home</span></a> > <a href="./areaRiservata.php">Area Personale</a> > <a href="./recensioni.php">Recensioni</a> > Aggiungi Recensione</p>
+</nav>
+
+<main id="content">
+    <div class="saluto">
+    <!--SALUTO-->
+    </div>
+
+    <nav id="SottoNav" aria-label="Sotto Menù di navigazione">
+    <ul>
+        <li><a href="./login.php" title="Vai al tuo Profilo">Profilo</a></li>
+        <li>Recensioni</li>
+    </ul>
+    </nav>
+    
+<div class="titolo">
+    <h2>Aggiungi la tua recensione</h2>
+</div>
+
+    <form action="aggiungiRecensioni.php" method="post">
+        <label for="prodotto">Seleziona il Prodotto:
+            <select id="prodotto" name="prodotto">
+                <!--PRODOTTI-->
+            </select>
+        </label>
+
+        <div class="voce">
+            <label for="valutazione">Valutazione:</label>
+                <input type="text" id="valutazione" name="valutazione" placeholder="Inserisci valutazione da 1 a 10" onblur="validateValutazione()">
+
+            <p class="pStyle" id="Valutazione">Sono concessi solo numeri in un range tra 1 e 10.</p>
+        </div>
+
+        <div class="voce">
+            <label for="commento">Commento:</label>
+                <textarea id="commento" name="commento" rows="4" placeholder="Inserisci il tuo commento" onblur="validateCommento()"></textarea>
+            <p class="pStyle" id="Commento">Sono concessi solo caratteri alfanumerici, spazi e alcuni segni di punteggiatura.</p>
+        </div>
+
+        <div class="errorMessage"><!--ERRORE--></div>
+
+        <div class="formButton">
+            <input class="button" type="submit" value="Invia la recensione" title="Aggiungi la recensione" >
+        </div>
+    </form>
+
+    <div class="mainFooter">
+        <a href="recensioni.php" class="button" title="Vai Indietro">Indietro</a>
+    </div>
+</main>
+
+<a href="#" id="scrollToTopLink"> Torna su </a> 
+
+<footer>
+    <img class="imgValidCode" height="40" src="./images/W3C_HTML5_certified.webp" alt="HTML5 valido" />
+    <p><span lang="en">TecTock - All Rights Reserved</span></p>
+    <img class="imgValidCode" height="40" src="./images/W3C_CSS_certified.webp" alt="CSS valido" />
+</footer>
+</body>
+</html>

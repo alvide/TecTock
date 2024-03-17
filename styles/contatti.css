@@ -1,0 +1,78 @@
+.icon {
+    height: 20px;
+    width: 20px;
+    display: block;
+	float: right;
+	margin: 0.2em;
+	transition: transform 0.3s;
+}
+
+.guida {
+	margin: 4em 0;
+	text-align: center;
+	margin-top: 0;
+}
+
+.guida > h1 {
+	font-size: 1.8em;
+	margin-bottom: 0.3em;
+}
+
+.contact-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: flex-start;
+	margin: auto;
+}
+
+.contact-box {
+	flex: 1;
+	flex-basis: 30%;
+	justify-content: space-between;
+	margin: 1em;
+}
+
+.contact-box-header {
+	display: flex;
+	align-items: center;
+	margin-bottom: 1em;
+}
+
+.contact-box-header i {
+	font-size: 1.3em;
+}
+
+.contact-box-header h2 {
+	text-transform: uppercase;
+	margin-left: 0.7em;
+	font-weight: bold;
+	font-size: 1em;
+}
+
+.contact-box-content {
+	margin-bottom: 1em;
+}
+
+.contact-box-content > ul {
+	list-style-type: none;
+}
+
+a:link {
+    color: var(--TextColorWhite);
+}
+
+#domandeFrequenti,
+#appuntamenti,
+#visitaBotique,
+#inviaMail,
+#chiamaci {
+	border-radius: 1em;
+	padding: 0.5em;
+	background-color: var(--FlagColor);
+	color: var(--TextColorWhite);
+}
+
+#iconaFAQ {
+	color: var(--TextColorWhite);
+}
